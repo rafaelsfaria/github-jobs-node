@@ -33,9 +33,9 @@ function JobModal({job, open, handleClose}) {
           <img className={'detail-logo'} src={job.company_logo} alt={job.company} />
         </DialogTitle>
         <DialogContent>
-          <DialogContentText
-            id="alert-dialog-slide-description"
-          >
+            <DialogContentText
+              id="alert-dialog-slide-description"
+            >
             <Chip size="small" label={`from ${job.source}`} />
           </DialogContentText>
           <DialogContentText

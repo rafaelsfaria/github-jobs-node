@@ -21,6 +21,7 @@ function Jobs({ jobs }) {
   // modal
   const [open, setOpen] = React.useState(false);
   const [selectedJob, selectJob] = React.useState({});
+
   function handleClickOpen() {
     setOpen(true);
   }
@@ -67,7 +68,6 @@ function Jobs({ jobs }) {
       {
         jobsOnPage.map(
           (job, i) => <Job key={i} job={job} onClick={() => {
-            console.log('clicked')
             handleClickOpen();
             selectJob(job)
           }} />
@@ -84,14 +84,14 @@ function Jobs({ jobs }) {
         nextButton={
           <Button size="small" onClick={handleNext} disabled={activeStep === numPages - 1}>
             Next
-                    <KeyboardArrowRight />
+            <KeyboardArrowRight />
           </Button>
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             <KeyboardArrowLeft />
             Back
-                    </Button>
+          </Button>
         }
       />
     </div>

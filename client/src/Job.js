@@ -26,9 +26,9 @@ function makeDate(timestamp) {
   }
 }
 
-function Job({ job }) {
+function Job({ job, onClick }) {
   return (
-    <Paper className='job'>
+    <Paper onClick={onClick} className='job'>
       <div className="flex-align-mid">
         <div className="job-title-location">
           <Typography variant='h6'>{job.title}</Typography>
