@@ -14,7 +14,7 @@ app.use(helmet())
 
 app.get('/api/jobs', async (req, res) => {
   const jobs = await getAsync('github');
-  return res.json(jobs)
+  return res.send(jobs)
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
